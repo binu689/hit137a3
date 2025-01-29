@@ -9,7 +9,7 @@ class ImageEditor:
         self.root = root
         self.root.title("Image Editor")
         self.root.geometry("1000x600")
-
+        self.root.state("zoomed")
         self.image = None
         self.temp_image = None
         self.cropped_image = None
