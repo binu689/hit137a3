@@ -73,7 +73,14 @@ class ImageEditor:
 
     def load_image(self):
         file_path = filedialog.askopenfilename(
-            filetypes=[("Image Files", "*.jpg;*.jpeg;*.png;*.bmp;*.tiff")]
+            filetypes=[
+                ("JPG Files", "*.jpg"),
+                ("JPEG Files", "*.jpeg"),
+                ("PNG Files", "*.png"),
+                ("BMP Files", "*.bmp"),
+                ("TIFF Files", "*.tiff"),
+                ("All Files", "*.*"),
+            ]
         )
         if file_path:
             self.image = cv2.imread(file_path)
